@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/TaskComp
+/TaskComp/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0
+/TaskComp/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0
+/TaskComp/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.1
+/TaskComp/bin/Debug/net6.0/runtimes/win-arm64/native
+/TaskComp/bin/Debug/net6.0/runtimes/win-arm/native
+/TaskComp/bin/Debug/net6.0/runtimes/win-x86/native
+/TaskComp/bin/Debug/net6.0/runtimes/win-x64/native
+/TaskComp/bin/Debug/net6.0/runtimes/unix/lib
+/TaskComp/bin/Debug/net6.0
+/TaskComp/obj
+/TaskComp/wwwroot/lib/bootstrap/LICENSE

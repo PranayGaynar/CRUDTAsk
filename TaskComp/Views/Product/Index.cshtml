@@ -1,0 +1,54 @@
+﻿@* @model IEnumerable<TaskComp.Models.ProductMaster>
+ *@
+ @model X.PagedList.IPagedList<TaskComp.Models.ProductMaster>
+
+
+@{
+    ViewData["Title"] = "Product List";
+}
+
+<h2>Product List</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Product</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Category Id</th>
+            <th>Category Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+
+                <td>@product.Name</td>
+                <td>@product.categorymasters.Id</td>
+                <td>@product.categorymasters.Name</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@product.Id" class="btn btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    @if (Model.HasPreviousPage)
+    {
+        <a href="@Url.Action("Index", new { page = Model.PageNumber - 1 })" class="btn btn-secondary">Previous</a>
+    }
+
+    @if (Model.HasNextPage)
+    {
+        <a href="@Url.Action("Index", new { page = Model.PageNumber + 1 })" class="btn btn-secondary">Next</a>
+    }
+</div>
