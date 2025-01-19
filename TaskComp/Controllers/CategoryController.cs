@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using TaskComp.ContextFile;
 using TaskComp.Models;
-
+// Pranay Gaynar
 namespace TaskComp.Controllers
 {
     public class CategoryController : Controller
